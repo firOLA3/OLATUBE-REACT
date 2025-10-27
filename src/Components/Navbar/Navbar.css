@@ -1,0 +1,113 @@
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav-left .menu-icon{
+    width: 22px;
+    margin-right: 25px;
+}
+
+.nav-left .logo{
+    width: 130px;
+}
+
+.ola-logo {
+  width: 220px;
+  height: 43px;
+  object-fit: contain; /*  width and heigh are 234,57  220/43 */
+}
+
+.nav-middle .search-box {
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+
+.nav-middle .search-box input {
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.nav-middle .search-box img{
+    width: 15px;
+}
+
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+
+.nav-right .user-icon{
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-menu-container {
+    position: relative;
+}
+
+
+.notification-container {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  background-color: #39d353;
+  color: white;
+  border-radius: 50%;
+  padding: 1px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 15px;
+  text-align: center;
+}
+
+
+@media (max-width:900px) {
+    nav {
+        padding: 8px 1%;
+        padding: 5px 15px;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .nav-right img{
+        display: none;
+    }
+    .nav-right .user-icon{
+        display: block;
+        width: 30px;
+        margin-right: 0;
+    }
+    .logo{
+        width: 90px;
+    }
+    .ola-logo {
+        width: 100px;
+        height: 24px;
+        margin-right: 5px;
+    }
+    .nav-middle .search-box input {
+        width: 120px;
+    }
+    .nav-middle .search-box {
+        margin-right: 5px;
+        padding: 6px 10px;
+    }
+    .nav-middle .search-box img {
+        width: 14px;
+    }
+}

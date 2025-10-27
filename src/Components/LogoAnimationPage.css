@@ -1,0 +1,65 @@
+.logo-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0ffe0 0%, #f0fff0 100%);
+}
+
+.logo-animation-img {
+  width: 234px;
+  height: 57px;
+  box-shadow: 0 0 40px 0 #39d35355;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* from animate.css oo */
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.animate__bounceIn {
+  animation-name: bounceIn;
+  /* animation-iteration-count: infinite; */
+}
+.animate__fadeOutUp {
+  animation-name: fadeOutUp;
+}
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}

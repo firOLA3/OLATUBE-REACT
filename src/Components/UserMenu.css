@@ -1,0 +1,71 @@
+/* Dropdown positioning */
+.user-menu-container {
+  position: relative;
+}
+
+.user-menu--dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  z-index: 1000;
+}
+
+.user-menu {
+  width: 320px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.user-menu__header {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.user-menu__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #39d353;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.user-menu__avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-menu__info { line-height: 1.2; }
+.user-menu__name { font-weight: 600; }
+.user-menu__handle { color: #aaa; font-size: 12px; margin-top: 2px; }
+.user-menu__view-channel { color: #39d353; font-size: 12px; text-decoration: none; margin-top: 6px; display: inline-block; }
+
+.user-menu__section { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.user-menu__section:last-child { border-bottom: none; }
+
+.user-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: #e5e5e5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user-menu__item:hover { background: rgba(255,255,255,0.06); }
+.user-menu__icon { width: 20px; text-align: center; opacity: 0.8; }
+
+
+

@@ -1,0 +1,101 @@
+/* Notification Modal Styles */
+.notification-modal-overlay {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification-modal {
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.notification-modal.success {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.notification-modal.error {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: white;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.notification-icon {
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.notification-message {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .notification-modal-overlay {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .notification-modal {
+    min-width: auto;
+    max-width: none;
+  }
+
+  .notification-content {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .notification-message {
+    font-size: 13px;
+  }
+}

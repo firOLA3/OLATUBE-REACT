@@ -12,7 +12,6 @@ const SignUpPage = () => {
   const [password, setPassword] = useState('')
   const [notification, setNotification] = useState(null);
   const navigate = useNavigate()
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 
   const showNotification = (message, type) => {
     setNotification({ message, type });
@@ -22,21 +21,22 @@ const SignUpPage = () => {
     setNotification(null);
   };
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+
   const addUser = (e) => {
-  e.preventDefault(); // Prevent form reload
-  let newUser = { firstName, lastName, email, password };
-  
-  axios.post(`${API_URL}/user/register`, newUser)
-    .then((res) => {
-      console.log("Response:", res.data);
-      showNotification("Signup successful! Please login.", "success");
-      setTimeout(() => navigate("/signin"), 2000);
-    })
-    .catch((err) => {
-      console.error("Error:", err.response ? err.response.data : err);
-      showNotification("Signup failed, try again.", "error");
-    });
-};
+    e.preventDefault(); // Prevent form reload
+    let newUser = { firstName, lastName, email, password}
+    axios.post(`${API_URL}/user/register`, newUser)
+      .then((res) => {
+        console.log("Response:", res.data);
+        showNotification("Signup successful! Please login.", "success");
+        setTimeout(() => navigate("/signin"), 2000);
+      })
+      .catch((err) => {
+        console.error("Error:", err.response ? err.response.data : err);
+        showNotification("Signup failed, try again.", "error");
+      });
+  }
 
 
 
@@ -74,6 +74,5 @@ const SignUpPage = () => {
     </>
   );
 };
-
 
 export default SignUpPage;
